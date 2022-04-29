@@ -1,0 +1,58 @@
+/* 
+
+--- 01 TYPOGRAPHY SYSTEM
+FONT SIZE (px)
+
+10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+Font weights: 
+Line heights:
+Default: 1
+      1.05
+       1.6
+SPACING SYSTEM (px)
+2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+
+*/
+
+.header {
+    background-image: linear-gradient(
+        rgba(34, 34, 34, 1),
+        rgba(34, 34, 34, 0.4)
+      ), url('../../img/stormtroopers-2.webp');
+    height: 100vh;
+    background-size: cover;
+}
+
+.hero{
+    max-width: 130rem;
+    margin: 0 auto;
+    padding: 0 3.2rem;
+}
+
+.grid{
+    display: grid;
+    column-gap: 6.4rem;
+    row-gap: 9.6rem;
+}
+
+.grid--2-cols {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.section-hero{
+    padding: 4.8rem 0 9.6rem 0;
+}
+
+.heading-primary{
+    font-size: 5.2rem;
+    font-weight: 700;
+    line-height: 1.8;
+    margin-bottom: 3.2rem;
+    color: #FFF;
+}
+
+.hero-description{
+    color: #FFF;
+    font-size: 2rem;
+    line-height: 1.8;
+}
