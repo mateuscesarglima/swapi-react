@@ -1,4 +1,4 @@
-import logo from "../../img/star-wars-144px.svg";
+import logo from "../../../img/star-wars-144px.svg";
 import { Link } from "react-router-dom";
 import "./NavBar.css";
 

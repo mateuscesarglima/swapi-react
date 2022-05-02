@@ -1,7 +1,7 @@
-import Header from "../layouts/Header"
+import Header from "../layouts/header/Header";
 
 const Species = () => {
-    return <Header title="Species" />;
-}
+  return <Header title="Species" />;
+};
 
-export default Species
+export default Species;

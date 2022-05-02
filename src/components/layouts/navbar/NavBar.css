@@ -24,6 +24,6 @@
 
 .main-nav-link:hover,
 .main-nav-link:active {
-    color: #ffd43b;
+    color: var(--primary-color);
 }
 
