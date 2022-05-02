@@ -1,9 +1,12 @@
-
-import Header from "../layouts/Header";
+import Header from "../layouts/header/Header";
+import Main from "../layouts/main/Main";
 
 const Home = () => {
-    return(
-        <Header title="Home"/>
-    )
-}
+  return (
+    <>
+      <Header />
+      <Main />
+    </>
+  );
+};
 export default Home;

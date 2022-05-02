@@ -1,25 +1,69 @@
-*{
-    margin: 0;
-    box-sizing: border-box;
-    padding: 0;
+:root {
+  --primary-color: #ffd43b;
+}
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+  padding: 0;
 }
 
 html {
-    font-size: 62.5%;
+  font-size: 62.5%;
 }
 
-body{
-    font-family: 'Open Sans', sans-serif;
-    line-height: 1;
-    font-weight: 400;
+body {
+  font-family: "Open Sans", sans-serif;
+  line-height: 1;
+  font-weight: 400;
 }
 
 *:focus {
-    outline: none;
-    /* outline: 4px dotted #e67e22; */
-    /* outline-offset: 8px; */
-    box-shadow: 0 0 0 0.8rem hsla(47, 100%, 62%, 0.274);
-    border-radius: 10px;
-    padding: 1rem;
+  outline: none;
+  /* outline: 4px dotted #e67e22; */
+  /* outline-offset: 8px; */
+  box-shadow: 0 0 0 0.8rem hsla(47, 100%, 62%, 0.274);
+  border-radius: 10px;
+  padding: 1rem;
 }
 
+
+.heading-primary,
+.heading-secondary,
+.heading-tertiary {
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  color: #333;
+}
+
+.heading-primary{
+    font-size: 5.2rem;
+    font-weight: 700;
+    line-height: 1.05;
+    margin-bottom: 3.2rem;
+    color: #FFF;
+}
+
+.grid{
+    display: grid;
+}
+
+.grid--2-cols{
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.grid--3-cols{
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.grid--4-cols{
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.grid--5-cols{
+    grid-template-columns: repeat(5, 1fr);
+}
+
+.grid--6-cols{
+    grid-template-columns: repeat(7, 1fr);
+}

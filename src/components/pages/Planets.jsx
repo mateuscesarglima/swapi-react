@@ -1,4 +1,4 @@
-import Header from "../layouts/Header";
+import Header from "../layouts/header/Header";
 
 const Planets = () => {
   return <Header title="Planets" />;
