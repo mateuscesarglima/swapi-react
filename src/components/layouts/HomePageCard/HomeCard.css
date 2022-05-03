@@ -1,0 +1,13 @@
+.card-img{
+    border-bottom: 2px solid var(--primary-color);
+    border-top-right-radius: 9px;
+    border-top-left-radius: 9px;
+    height: 28rem;
+}
+
+.card-title{
+    font-size: 2.4rem;
+    color: var(--primary-color);
+    margin-top: 2rem;
+}
+
