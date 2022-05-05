@@ -19,9 +19,10 @@ SPACING SYSTEM (px)
         rgba(34, 34, 34, 1),
         rgba(34, 34, 34, 0.7)
       ), url('../../../img/stormtroopers-2.webp');
-    height: 100vh;
+    height: 95rem;
     width: 100%;
     background-size: cover;
+    background-position: center;
     border-bottom: 2px solid var(--primary-color);
     position: relative;
 }
@@ -43,7 +44,7 @@ SPACING SYSTEM (px)
 }
 
 .section-hero{
-    padding:9.6rem 0 9.6rem 0;
+    padding: 12.8rem 0 9.6rem 0;
 }
 
 .hero-description{

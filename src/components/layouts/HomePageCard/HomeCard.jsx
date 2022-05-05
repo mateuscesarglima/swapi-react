@@ -1,16 +1,17 @@
-import planetImg from "../../../img/planets/tatooine.webp";
-import "./HomeCard.css"
+import "./HomeCard.css";
 
-const HomeCard = () => {
+const HomeCard = ({ title, number, description, img, alt }) => {
   return (
-    <div className="card">
-      <div className="img-box">
-        <img src={planetImg} alt={planetImg} className="card-img" />
+    <>
+      <div className="card-text-box">
+        <p className="card-number">{number}</p>
+        <h3 className="card-title">{title}</h3>
+        <p className="card-description">{description}</p>
       </div>
-      <div className="card-content">
-        <h1 className="card-title">Planets</h1>
-      </div>
-    </div>
+      <figure className="step-img-box">
+        <img src={img} alt={alt} className="step-img" />
+      </figure>
+    </>
   );
 };
 
