@@ -76,3 +76,7 @@ body {
 .grid--6-cols{
     grid-template-columns: repeat(7, 1fr);
 }
+
+.grid--center-v{
+  align-items: center;
+}
