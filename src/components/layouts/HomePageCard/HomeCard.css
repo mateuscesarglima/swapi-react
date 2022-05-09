@@ -1,16 +1,13 @@
-
-.card-text-box{
-  justify-self: center
+.card-text-box {
+  justify-self: center;
 }
 
-
-.card-number{
+.card-number {
   font-size: 7.4rem;
-  color: #FFF;
+  color: #fff;
   font-weight: 700;
   margin-bottom: 1rem;
 }
-
 
 .card-title {
   font-size: 3rem;
@@ -20,42 +17,48 @@
 
 .card-description {
   font-size: 2rem;
-  color: #FFF;
+  color: #fff;
   line-height: 1.8;
+  margin-bottom: 3rem;
+}
+
+.know-more{
+  margin-bottom: 4rem;
+  font-size: 2rem;
+  color: #fff;
+  line-height: 1.8;
+}
+
+.font-size{
+  font-size: 1.5rem;
 }
 
 .step-img-box {
   display: flex;
   justify-content: center;
-  
 }
 
 .step-img-box img {
-
   border-radius: 10px;
   width: 50%;
   border-radius: 9px;
 
-  border: 3px solid var(--primary-color);
+  border: 2px solid var(--primary-color);
   transition: all 0.3s;
 }
 
 .step-img-box img:hover {
   transform: scale(1.5);
-  
+
   box-shadow: 0px 2px 20px 1px rgba(216, 212, 3, 0.8);
 }
 
-.step-img-box:nth-child(4){
-    grid-column: 1;
-    grid-row: 2;
-  
+.step-img-box:nth-child(4) {
+  grid-column: 1;
+  grid-row: 2;
 }
 
-.step-img-box:nth-child(8){
-    grid-column: 1;
-    grid-row: 4;
-  
+.step-img-box:nth-child(8) {
+  grid-column: 1;
+  grid-row: 4;
 }
-
-
