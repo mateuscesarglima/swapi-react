@@ -1,6 +1,7 @@
 import Container from "../container/Container";
 import HomeCard from "../HomePageCard/HomeCard";
 import planetTatooine from "../../../img/planets/tatooine.webp";
+import Carousel from "../carousel/Carousel";
 import "./Main.css";
 const Main = () => {
   return (

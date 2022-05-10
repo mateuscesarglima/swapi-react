@@ -60,7 +60,7 @@ const Footer = () => {
             </p>
           </div>
           <div className="address-col">
-            <p className="footer-heading">Contact us</p>
+            <p className="footer-heading">Contact me</p>
             <address className="contacts">
               <p className="address">
                 Rua Carlos Chagas 779,

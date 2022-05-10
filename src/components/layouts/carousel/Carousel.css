@@ -1,0 +1,21 @@
+
+.carousel-container{
+    padding: 9.6rem 0;
+    background-color: #000;
+    border-bottom: 2px solid var(--primary-color);
+}   
+
+.carousel-title{
+    color: var(--primary-color);
+    font-size: 3rem;
+}
+
+.carousel-description{
+    color: #FFF;
+    font-size: 2rem;
+}
+
+.person{
+    color: #FFF;
+    font-size: 2rem;
+}
