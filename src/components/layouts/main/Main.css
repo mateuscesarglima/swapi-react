@@ -1,11 +1,14 @@
+
+
 .main-background {
   background-image: linear-gradient(
-      rgba(34, 34, 34, 0.8),
-      rgba(34, 34, 34, 0.8)
+      rgba(34, 34, 34, 0.808),
+      rgba(0, 0, 0, 0.966)
     ),
     url(../../../img/backgroundMain/backgroundImg.webp) ;
   background-size: cover;
   background-repeat: no-repeat;
+  border-bottom: 2px solid var(--primary-color);
 }
 
 /* .main-background{

@@ -18,16 +18,6 @@ body {
   font-weight: 400;
 }
 
-*:focus {
-  outline: none;
-  /* outline: 4px dotted #e67e22; */
-  /* outline-offset: 8px; */
-  box-shadow: 0 0 0 0.8rem hsla(47, 100%, 62%, 0.274);
-  border-radius: 10px;
-  padding: 1rem;
-}
-
-
 .heading-primary,
 .heading-secondary,
 .heading-tertiary {
@@ -52,9 +42,10 @@ body {
   margin-bottom: 9.6rem;
 }
 
-
 .grid{
     display: grid;
+    column-gap: 6.4rem;
+    row-gap: 9.6rem;
 }
 
 .grid--2-cols{
@@ -79,4 +70,9 @@ body {
 
 .grid--center-v{
   align-items: center;
+}
+
+
+*a:active{
+  box-shadow: 0 0 0 2px var(--primary-color);
 }

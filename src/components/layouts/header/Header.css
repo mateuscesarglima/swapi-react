@@ -33,15 +33,6 @@ SPACING SYSTEM (px)
     padding: 0 3.2rem;
 }
 
-.grid{
-    display: grid;
-    column-gap: 6.4rem;
-    row-gap: 9.6rem;
-}
-
-.grid--2-cols {
-    grid-template-columns: repeat(2, 1fr);
-}
 
 .section-hero{
     padding: 12.8rem 0 9.6rem 0;
