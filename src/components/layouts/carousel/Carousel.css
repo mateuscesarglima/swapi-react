@@ -1,0 +1,61 @@
+.carousel-container {
+  padding: 9rem 0;
+  border-bottom: 2px solid var(--primary-color);
+  background-color: #333;
+}
+.carousel-title {
+  color: var(--primary-color);
+  font-size: 3rem;
+}
+
+.item-box {
+  padding: 0 10rem;
+  text-align: center;
+  line-height: 1.05;
+}
+
+.carousel-primary-heading {
+  text-align: center;
+  margin-bottom: 5rem;
+  font-size: 3rem;
+  color: #fff;
+  font-weight: 600;
+}
+
+.carousel-item-title {
+  color: var(--primary-color);
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 5rem;
+}
+
+.carousel-description {
+  color: #fff;
+  font-size: 2rem;
+  line-height: 1.8;
+  font-weight: 500;
+}
+
+.person {
+  color: #fff;
+  font-size: 2rem;
+  font-weight: 600;
+  color: var(--primary-color);
+  margin-top: 4rem;
+}
+
+.slider-container {
+  padding: 0;
+}
+
+.carousel-grid {
+  display: grid;
+}
+
+.inspired-by {
+  margin-top: 10rem;
+  text-align: center;
+  color: var(--primary-color);
+  font-size: 2rem;
+  line-height: 1.2;
+}
