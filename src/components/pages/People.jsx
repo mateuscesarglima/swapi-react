@@ -2,7 +2,9 @@ import Header from "../layouts/header/Header"
 
 const People = () => {
     return(
-        <Header title="People"/>
+        <div className="grid grid--4-cols">
+            
+        </div>
     )
 }
 
