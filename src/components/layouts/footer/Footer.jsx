@@ -8,7 +8,7 @@ const Footer = () => {
   return (
     <footer>
       <Container>
-        <div className="grid grid--3-cols">
+        <div className="grid footer-grid">
           <div className="logo-col">
             <Link to="/">
               <img src={logo} alt="star wars logo" />
@@ -83,7 +83,7 @@ const Footer = () => {
               target="_blank"
               rel="noreferrer noopener"
               className="know-more-footer"
-            >Learn more about</a>
+            >Learn more about it</a>
           </div>
         </div>
       </Container>
