@@ -76,3 +76,13 @@ body {
 *a:active{
   box-shadow: 0 0 0 2px var(--primary-color);
 }
+
+.loading-animation{
+  background-color: #333;
+  color: #FFF;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  font-size: 5rem;
+  height: 100vh;
+}

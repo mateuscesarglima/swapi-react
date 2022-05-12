@@ -3,7 +3,6 @@ import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 import "./Carousel.css";
 import Container from "../container/Container";
-import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 
 const Carousel = () => {
   const data = [
@@ -84,11 +83,11 @@ const Carousel = () => {
           </Slider>
         </div>
         {/* <p className="inspired-by">
-          this section was inspired by: Maria Eduarda Mendonça <br />
+          this section was inspired by: Maria Eduarda Mendonça. <br />
           In one of our conversations, I was talking about the project and she
-          commented <br /> on a quote from Darth Vader giving me the idea of
-          ​​creating a section only of famous quotes from Star Wars
-        </p> */}
+          commented <br /> a quote from Darth Vader giving me the idea of
+          ​​creating a section only with famous quotes from Star Wars
+        </p>  */}
       </Container>
     </div>
   );

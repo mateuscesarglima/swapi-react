@@ -1,7 +1,7 @@
 import "./HomeCard.css";
 import LinkButton from "../linkButton/LinkButton";
 
-const HomeCard = ({title, number, description, img, alt, content,to }) => {
+const HomeCard = ({title, number, description, img, alt, content,to}) => {
   return (
     <>
       <div className="card-text-box">
