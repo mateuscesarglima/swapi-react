@@ -3,7 +3,6 @@ import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 import "./Carousel.css";
 import Container from "../container/Container";
-import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 
 const Carousel = () => {
   const data = [
@@ -44,22 +43,22 @@ const Carousel = () => {
       usedBy: "Master Yoda",
     },
     {
-      phrase: "Seu foco determina sua realidade.",
+      phrase: "Your focus determines your reality.",
       description:
-        "Essas sábias palavras foram ditas por Qui-Gon Jin a Anakin (Jake Lloyd) quando este deixa Coruscant para ir à Naboo em Star Wars Episódio I: A Ameaça Fantasma.",
+        "These wise words were spoken by Qui-Gon Jin to Anakin (Jake Lloyd) as he leaves Coruscant for Naboo in Star Wars Episode I: The Phantom Menace.",
       usedBy: "Qui-Gon Jinn",
     },
     {
       phrase: "Luke, i'm your father",
       description:
-        "Que a força esteja com você é usada para desejar sorte a alguém, e também para que o poder da Força esteja do lado daqueles que se desviaram do caminho",
+        "Iconic quote by Darth Vader.",
       usedBy: "Darth Vader",
     },
   ];
 
   let settings = {
     dots: false,
-    arrows: false,
+    arrows: true,
     fade: true,
     autoplay: true,
     speed: 1000,
@@ -83,12 +82,12 @@ const Carousel = () => {
             ))}
           </Slider>
         </div>
-        <p className="inspired-by">
-          this section was inspired by: Maria Eduarda Mendonça <br />
+        {/* <p className="inspired-by">
+          this section was inspired by: Maria Eduarda Mendonça. <br />
           In one of our conversations, I was talking about the project and she
-          commented <br /> on a quote from Darth Vader giving me the idea of
-          ​​creating a section only of famous quotes from Star Wars
-        </p>
+          commented <br /> a quote from Darth Vader giving me the idea of
+          ​​creating a section only with famous quotes from Star Wars
+        </p>  */}
       </Container>
     </div>
   );

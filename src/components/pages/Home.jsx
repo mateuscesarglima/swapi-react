@@ -7,8 +7,8 @@ const Home = () => {
   return (
     <>
       <Header />
-      <Main />
       <Carousel/>
+      <Main />
       <Footer />
     </>
   );
