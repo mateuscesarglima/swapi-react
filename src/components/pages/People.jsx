@@ -1,7 +1,6 @@
 import NavBar from "../layouts/navbar/NavBar";
 import { useEffect, useState } from "react";
 import api from "../../services/Api";
-import "./People.css";
 import Container from "../layouts/container/Container";
 
 
