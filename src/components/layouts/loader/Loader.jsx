@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { SpinnerDotted } from "spinners-react";
 import styles from "./Loader.module.css";
 
