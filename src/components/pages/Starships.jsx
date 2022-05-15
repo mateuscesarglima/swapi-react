@@ -4,6 +4,7 @@ import NavBar from "../layouts/navbar/NavBar";
 import Loader from "../layouts/loader/Loader";
 
 const Starships = () => {
+    
   const [loading, setLoading] = useState(true);
   const [starships, setStarships] = useState([]);
 
@@ -21,8 +22,6 @@ const Starships = () => {
     }
     fetchStarships();
   }, []);
-
-  console.log(starships)
 
   return (
     <>
