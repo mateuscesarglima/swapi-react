@@ -94,38 +94,24 @@ body {
 .data-container{
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
   border: 1px solid var(--primary-color);
   padding: 2rem;
 }
 
 .page-card-text{
   font-size: 1.8rem;
-  line-height: 1.05;
+  line-height: 1.8;
   color: #FFF;
 }
 
 .page-card-title{
   font-size: 3rem;
   color: var(--primary-color);
-  margin-bottom: 1.5rem;
+  margin-bottom: 3rem;
 }
 
 .page-card-text strong{
   font-size: 2rem;
   font-weight: 500;
   color: var(--primary-color);
-
-}
-
-.page-card-first-content{
- 
-}
-
-.page-card-second-content{
- 
-}
-
-.page-card-third-content{
- 
 }

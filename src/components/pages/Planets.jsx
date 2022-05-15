@@ -1,47 +1,49 @@
 import { useState, useEffect } from "react";
 import api from "../../services/Api";
-import Container from "../layouts/container/Container";
 import Loader from "../layouts/loader/Loader";
 import NavBar from "../layouts/navbar/NavBar";
 
 const Planets = () => {
   const [planets, setPlanets] = useState([]);
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    setLoading(true);
-    setTimeout(() => {
-      async function fetchPlanets() {
-        setLoading(true);
-        await api
-          .get("/planets/")
-          .then((response) => {
-            setPlanets(response.data.results);
-          })
-          .catch((err) => {
-            console.log(err);
-          });
-      }
-      fetchPlanets();
-      setLoading(false);
-    }, 3000);
+    async function fetchPlanets() {
+      await api
+        .get("/planets/")
+        .then(({ data }) => {
+          setPlanets(data.results);
+          setLoading(false);
+        })
+        .catch((err) => {
+          console.log(err);
+        });
+    }
+    fetchPlanets();
   }, []);
-
-  console.log(planets);
-  console.log(loading);
 
   return (
     <>
       {loading ? (
-        <Loader color="#ffd43b" size="30" loading={loading} />
+        <div style={{ backgroundColor: "#333" }}>
+          <NavBar />
+          <Loader color="#ffd43b" size="100" />
+        </div>
       ) : (
         <div className="people-content" style={{ backgroundColor: "#333" }}>
           <div className="navbar-container">
             <NavBar />
           </div>
-          <Container>
+          <div
+            style={{
+              maxWidth: "140rem",
+              padding: "0 3.6rem",
+              margin: "0 auto",
+              maxHeight: "100%"
+            }}
+          >
             <div className="card-container-people">
-              <div className="cards grid grid--4-cols">
+              <div className="cards grid grid--3-cols">
                 {planets.map((planet, index) => (
                   <div className="data-container" key={index}>
                     <h1 className="page-card-title">{planet.name}</h1>
@@ -63,7 +65,7 @@ const Planets = () => {
                 ))}
               </div>
             </div>
-          </Container>
+          </div>
         </div>
       )}
     </>
