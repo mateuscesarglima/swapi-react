@@ -82,12 +82,6 @@ const Carousel = () => {
             ))}
           </Slider>
         </div>
-        {/* <p className="inspired-by">
-          this section was inspired by: Maria Eduarda Mendonça. <br />
-          In one of our conversations, I was talking about the project and she
-          commented <br /> a quote from Darth Vader giving me the idea of
-          ​​creating a section only with famous quotes from Star Wars
-        </p>  */}
       </Container>
     </div>
   );

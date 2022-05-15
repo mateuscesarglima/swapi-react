@@ -1,4 +1,5 @@
 import "../container/Container.css"
+import "./Container.css"
 
 const Container = ({children}) => {
     return(
