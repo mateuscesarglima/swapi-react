@@ -9,10 +9,14 @@ const People = () => {
 
   useEffect(() => {
     async function fetchPeople() {
-      await api.get("/people/").then(({ data }) => {
+      await api.get("/people/")
+      .then(({ data }) => {
         setPeople(data.results);
         setLoading(false);
-      });
+      })
+      .catch((err) => {
+        console.log(err)
+      })
     }
     fetchPeople();
   }, []);
