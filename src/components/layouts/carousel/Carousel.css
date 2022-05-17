@@ -2,7 +2,14 @@
   padding: 9rem 0 7rem 0;
   border-bottom: 2px solid var(--primary-color);
   background-color: #333;
+
 }
+
+.carousel{
+  max-width: 120rem;
+  margin: 0 auto;
+}
+
 .carousel-title {
   color: var(--primary-color);
   font-size: 3rem;
@@ -67,7 +74,7 @@
 
 .slick-prev:before, .slick-next:before{
   font-size: 5rem;
-
 }
+
 
 

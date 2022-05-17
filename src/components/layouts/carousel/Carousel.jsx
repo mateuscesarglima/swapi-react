@@ -49,9 +49,8 @@ const Carousel = () => {
       usedBy: "Qui-Gon Jinn",
     },
     {
-      phrase: "Luke, i'm your father",
-      description:
-        "Iconic quote by Darth Vader.",
+      phrase: "Luke, I'm your father",
+      description: "Iconic quote by Darth Vader.",
       usedBy: "Darth Vader",
     },
   ];
@@ -70,7 +69,7 @@ const Carousel = () => {
 
   return (
     <div className="carousel-container">
-      <Container>
+      <div className="carousel">
         <div className="slider-container">
           <Slider {...settings}>
             {data.map((item, index) => (
@@ -82,7 +81,7 @@ const Carousel = () => {
             ))}
           </Slider>
         </div>
-      </Container>
+      </div>
     </div>
   );
 };
