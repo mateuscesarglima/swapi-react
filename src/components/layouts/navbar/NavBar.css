@@ -26,3 +26,25 @@
 .main-nav-link:active {
     color: var(--primary-color);
 }
+
+.btn-mobile-nav{
+    border: none;
+    background: none;
+    cursor: pointer;
+    display: none;
+    z-index: 9999;
+}
+
+.icon-mobile-nav{
+    color: #FFF;
+    width: 4.8rem;
+    height: 4.8rem;
+}
+
+.menu-hamburguer:hover{
+    stroke: var(--primary-color);
+}
+
+.icon-mobile-nav[name="close"]{
+    display: none;
+}

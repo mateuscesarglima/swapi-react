@@ -4,18 +4,24 @@ import api from "../../services/Api";
 import Loader from "../layouts/loader/Loader";
 
 const People = () => {
+
   const [loading, setLoading] = useState(true);
   const [people, setPeople] = useState([]);
 
+  
+
   useEffect(() => {
     async function fetchPeople() {
-      await api.get("/people/").then(({ data }) => {
+      await api.get("/people/")
+      .then(({ data }) => {
         setPeople(data.results);
         setLoading(false);
       });
     }
     fetchPeople();
   }, []);
+
+  console.log(people)
 
   return (
     <>
