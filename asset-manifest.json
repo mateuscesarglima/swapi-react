@@ -1,21 +1,21 @@
 {
   "files": {
-    "main.css": "/home/static/css/main.15f8e4f1.css",
-    "main.js": "/home/static/js/main.b8868462.js",
-    "static/media/backgroundImg.webp": "/home/static/media/backgroundImg.73507f49ad950c881e8f.webp",
-    "static/media/stormtroopers-2.webp": "/home/static/media/stormtroopers-2.a49f12a93c27c8bdc7dd.webp",
-    "static/media/tatooine.webp": "/home/static/media/tatooine.74d5ba95d19cb73c8f29.webp",
-    "static/media/star-wars-144px.svg": "/home/static/media/star-wars-144px.117e0bb8fd112175c7eb0648609d6778.svg",
-    "static/media/slick.svg": "/home/static/media/slick.2630a3e3eab21c607e21.svg",
-    "static/media/slick.eot": "/home/static/media/slick.a4e97f5a2a64f0ab1323.eot",
-    "static/media/slick.ttf": "/home/static/media/slick.c94f7671dcc99dce43e2.ttf",
-    "static/media/slick.woff": "/home/static/media/slick.295183786cd8a1389865.woff",
-    "index.html": "/home/index.html",
-    "main.15f8e4f1.css.map": "/home/static/css/main.15f8e4f1.css.map",
-    "main.b8868462.js.map": "/home/static/js/main.b8868462.js.map"
+    "main.css": "/swapi-react/static/css/main.49e802d6.css",
+    "main.js": "/swapi-react/static/js/main.e91f0e3e.js",
+    "static/media/backgroundImg.webp": "/swapi-react/static/media/backgroundImg.73507f49ad950c881e8f.webp",
+    "static/media/stormtroopers-2.webp": "/swapi-react/static/media/stormtroopers-2.a49f12a93c27c8bdc7dd.webp",
+    "static/media/tatooine.webp": "/swapi-react/static/media/tatooine.74d5ba95d19cb73c8f29.webp",
+    "static/media/star-wars-144px.svg": "/swapi-react/static/media/star-wars-144px.117e0bb8fd112175c7eb0648609d6778.svg",
+    "static/media/slick.svg": "/swapi-react/static/media/slick.2630a3e3eab21c607e21.svg",
+    "static/media/slick.eot": "/swapi-react/static/media/slick.a4e97f5a2a64f0ab1323.eot",
+    "static/media/slick.ttf": "/swapi-react/static/media/slick.c94f7671dcc99dce43e2.ttf",
+    "static/media/slick.woff": "/swapi-react/static/media/slick.295183786cd8a1389865.woff",
+    "index.html": "/swapi-react/index.html",
+    "main.49e802d6.css.map": "/swapi-react/static/css/main.49e802d6.css.map",
+    "main.e91f0e3e.js.map": "/swapi-react/static/js/main.e91f0e3e.js.map"
   },
   "entrypoints": [
-    "static/css/main.15f8e4f1.css",
-    "static/js/main.b8868462.js"
+    "static/css/main.49e802d6.css",
+    "static/js/main.e91f0e3e.js"
   ]
 }
