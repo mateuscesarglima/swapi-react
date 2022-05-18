@@ -7,12 +7,11 @@ import Species from "./components/pages/Species";
 import Vehicles from "./components/pages/Vehicles";
 
 function App() {
-
   return (
     <div className="App">
       <Routes>
         <Route exact path="/" element={<Home />} />
-        <Route exact path="/people" element={<People/>} />
+        <Route exact path="/people" element={<People />} />
         <Route exact path="/planets" element={<Planets />} />
         <Route exact path="/starships" element={<Starships />} />
         <Route exact path="/species" element={<Species />} />

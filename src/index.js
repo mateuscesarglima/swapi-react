@@ -7,7 +7,7 @@ import "./queries.css";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
-  <Router>
+  <Router basename="/">
     <React.StrictMode>
       <App />
     </React.StrictMode>
