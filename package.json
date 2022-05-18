@@ -2,6 +2,8 @@
   "name": "swapi-react",
   "version": "0.1.0",
   "private": true,
+  "predeploy" : "npm run build",
+  "deploy" : "gh-pages -d dist",
   "dependencies": {
     "@mui/icons-material": "^5.6.2",
     "@testing-library/jest-dom": "^5.16.4",
@@ -42,5 +44,9 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "gh-pages": "^4.0.0"
   }
+  
 }
