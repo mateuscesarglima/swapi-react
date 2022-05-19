@@ -48,6 +48,11 @@ const NavBar = () => {
               Vehicles
             </Link>
           </li>
+          <li>
+            <Link to="/films" className="main-nav-link">
+              Films
+            </Link>
+          </li>
         </ul>
       </div>
       <button className="btn-mobile-nav">
