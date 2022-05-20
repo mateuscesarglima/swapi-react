@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/swapi-react/static/css/main.49e802d6.css",
-    "main.js": "/swapi-react/static/js/main.764b361c.js",
+    "main.js": "/swapi-react/static/js/main.9e5189e8.js",
     "static/media/backgroundImg.webp": "/swapi-react/static/media/backgroundImg.73507f49ad950c881e8f.webp",
     "static/media/stormtroopers-2.webp": "/swapi-react/static/media/stormtroopers-2.a49f12a93c27c8bdc7dd.webp",
     "static/media/tatooine.webp": "/swapi-react/static/media/tatooine.74d5ba95d19cb73c8f29.webp",
@@ -12,10 +12,10 @@
     "static/media/slick.woff": "/swapi-react/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/swapi-react/index.html",
     "main.49e802d6.css.map": "/swapi-react/static/css/main.49e802d6.css.map",
-    "main.764b361c.js.map": "/swapi-react/static/js/main.764b361c.js.map"
+    "main.9e5189e8.js.map": "/swapi-react/static/js/main.9e5189e8.js.map"
   },
   "entrypoints": [
     "static/css/main.49e802d6.css",
-    "static/js/main.764b361c.js"
+    "static/js/main.9e5189e8.js"
   ]
 }
