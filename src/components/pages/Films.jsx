@@ -23,8 +23,6 @@ const Films = () => {
     fetchFilms();
   });
 
-  console.log(films)
-
   return (
     <>
       {loading ? (
