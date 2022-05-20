@@ -3,24 +3,27 @@ import { useEffect, useState } from "react";
 import api from "../../services/Api";
 import Loader from "../layouts/loader/Loader";
 
-const People = () => {
-
+const Films = () => {
   const [loading, setLoading] = useState(true);
-  const [people, setPeople] = useState([]);
+  const [films, setFilms] = useState([]);
 
-  
 
   useEffect(() => {
-    async function fetchPeople() {
-      await api.get("/people/")
-      .then(({ data }) => {
-        setPeople(data.results);
-        setLoading(false);
-      });
+    async function fetchFilms() {
+      await api
+        .get("/films/")
+        .then(({ data }) => {
+          setFilms(data.results);
+          setLoading(false);
+        })
+        .catch((err) => {
+          console.log(err);
+        });
     }
-    fetchPeople();
-  }, []);
+    fetchFilms();
+  });
 
+  console.log(films)
 
   return (
     <>
@@ -43,26 +46,18 @@ const People = () => {
           >
             <div className="card-container-people">
               <div className="cards grid grid--3-cols">
-                {people.map((person, index) => (
+                {films.map((film, index) => (
                   <div className="data-container" key={index}>
-                    <h1 className="page-card-title">{person.name}</h1>
+                    <h1 className="page-card-title">{film.title}</h1>
                     <p className="page-card-text">
-                      <strong>Birth Year: </strong>
-                      {person.birth_year}
+                      <strong>Director: </strong>
+                      {film.director}
                     </p>
                     <p className="page-card-first-content page-card-text">
-                      <strong>Height: </strong> {person.height} cm
+                      <strong>Producer: </strong> {film.producer}
                     </p>
                     <p className="page-card-second-content page-card-text">
-                      <strong>Mass: </strong> {person.mass}
-                    </p>
-                    <p className="page-card-third-content page-card-text">
-                      <strong>Hair color: </strong>
-                      {person.hair_color}
-                    </p>
-                    <p className="page-card-fourth-content page-card-text">
-                      <strong>Skin color: </strong>
-                      {person.skin_color}
+                      <strong>Opening craw: </strong> {film.opening_crawl}
                     </p>
                   </div>
                 ))}
@@ -75,4 +70,4 @@ const People = () => {
   );
 };
 
-export default People;
+export default Films;

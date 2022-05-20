@@ -5,6 +5,7 @@ import Planets from "./components/pages/Planets";
 import Starships from "./components/pages/Starships";
 import Species from "./components/pages/Species";
 import Vehicles from "./components/pages/Vehicles";
+import Films from "./components/pages/Films";
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
       <Routes>
         <Route exact path="/" element={<Home />} />
         <Route exact path="/people" element={<People />} />
+        <Route exact path="/films" element={<Films />} />
         <Route exact path="/planets" element={<Planets />} />
         <Route exact path="/starships" element={<Starships />} />
         <Route exact path="/species" element={<Species />} />
