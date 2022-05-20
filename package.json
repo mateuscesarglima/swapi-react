@@ -2,7 +2,7 @@
   "name": "swapi-react",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://mateuscesarglima.github.io/",
+  "homepage": "https://mateuscesarglima.github.io/swapi-react",
   "dependencies": {
     "@mui/icons-material": "^5.6.2",
     "@testing-library/jest-dom": "^5.16.4",
@@ -17,6 +17,7 @@
     "react-scripts": "5.0.1",
     "react-slick": "^0.29.0",
     "slick-carousel": "^1.8.1",
+    "gh-pages": "^4.0.0",
     "spinners-react": "^1.0.7",
     "web-vitals": "^2.1.4"
   },
@@ -45,8 +46,5 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "devDependencies": {
-    "gh-pages": "^4.0.0"
   }
 }
