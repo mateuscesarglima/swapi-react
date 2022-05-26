@@ -31,7 +31,7 @@ const Footer = () => {
                   rel="noreferrer noopener"
                   className="twitter"
                 >
-                  <BsFacebook />
+                  <BsTwitter />
                 </a>
               </li>
               <li className="social-link">
@@ -41,7 +41,7 @@ const Footer = () => {
                   rel="noreferrer noopener"
                   className="facebook"
                 >
-                  <BsTwitter />
+                  <BsFacebook />
                 </a>
               </li>
               <li className="social-link">
