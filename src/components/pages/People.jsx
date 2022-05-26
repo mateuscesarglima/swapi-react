@@ -1,5 +1,6 @@
 import NavBar from "../layouts/navbar/NavBar";
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import api from "../../services/Api";
 import Loader from "../layouts/loader/Loader";
 
