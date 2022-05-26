@@ -3,13 +3,15 @@ import { useEffect, useState } from "react";
 import api from "../../services/Api";
 import Loader from "../layouts/loader/Loader";
 
-const Films = () => {
+const Films = ({url}) => {
+
   const [loading, setLoading] = useState(true);
   const [films, setFilms] = useState([]);
 
 
   useEffect(() => {
     async function fetchFilms() {
+
       await api
         .get("/films/")
         .then(({ data }) => {
