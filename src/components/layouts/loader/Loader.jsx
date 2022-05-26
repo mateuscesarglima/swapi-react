@@ -1,11 +1,11 @@
-import { SpinnerCircularFixed } from "spinners-react";
+import { SpinnerDotted } from "spinners-react";
 import styles from "./Loader.module.css";
 
 
 const Loader = ({color, size}) => {
   return (
     <div className={styles.loaderContainer}>
-      <SpinnerCircularFixed color={color} size={size}/>
+      <SpinnerDotted color={color} size={size}/>
     </div>
   );
 };
