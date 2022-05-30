@@ -48,3 +48,25 @@ SPACING SYSTEM (px)
 .btnFull{
     color: black;
 }
+
+.btn {
+    display: inline-block;
+    font-size: 2.4rem;
+    font-weight: 700;
+    text-decoration: none;
+    color: black;
+    background-color: var(--primary-color);
+    padding: 1.6rem 3.2rem;
+    border-radius: 9px;
+    transition: all .3s;
+    cursor: pointer;
+}
+
+.btn:hover,
+.btn:active {
+    background-color: rgb(51, 51, 51);
+    color: var(--primary-color);
+    box-shadow: 0 0 0 2px var(--primary-color);
+}
+
+

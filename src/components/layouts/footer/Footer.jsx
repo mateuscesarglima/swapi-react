@@ -1,17 +1,23 @@
 import { Link } from "react-router-dom";
 import { BsInstagram, BsFacebook, BsTwitter, BsYoutube } from "react-icons/bs";
+import {animateScroll as scroll} from 'react-scroll'
 import "./Footer.css";
 import Container from "../container/Container";
 import logo from "../../../img/star-wars-144px.svg";
 
 const Footer = () => {
+
+  const scrollToTop = () => {
+    scroll.scrollToTop()
+  }
+
   return (
     <footer>
       <Container>
         <div className="grid footer-grid">
           <div className="logo-col">
             <Link to="/">
-              <img src={logo} alt="star wars logo" />
+              <img src={logo} alt="star wars logo" onClick={scrollToTop}/>
             </Link>
             <ul className="social-links">
               <li className="social-link">

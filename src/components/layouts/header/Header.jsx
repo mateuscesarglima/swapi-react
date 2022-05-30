@@ -1,5 +1,9 @@
-import LinkButton from "../linkButton/LinkButton";
+
 import NavBar from "../navbar/NavBar";
+
+//SCROLL
+import {Link, animateScroll as scroll} from 'react-scroll'
+
 import "./Header.css";
 
 const Header = () => {
@@ -17,9 +21,20 @@ const Header = () => {
               more about Star Wars People, Planets, Starships, Species and
               Vehicles.
             </p>
-            <LinkButton to="#main-section" className="btn btn--full">
+            <Link
+                activeClass="active"
+                to="main-section"
+                spy={true}
+                smooth={true}
+                offset={0}
+                duration={600}
+                className="btn btn--full"
+              >
+                Start Your Journey
+              </Link>
+            {/* <LinkButton to="#main-section" className="btn btn--full">
               Start Your Journey
-            </LinkButton>
+            </LinkButton> */}
           </div>
           <div></div>
         </div>
