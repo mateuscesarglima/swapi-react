@@ -48,17 +48,17 @@ const Planets = () => {
                   <div className="data-container" key={index}>
                     <h1 className="page-card-title">{planet.name}</h1>
                     <p className="page-card-first-content page-card-text">
-                      <strong>Rotation: </strong> {planet.rotation_period}
+                      <strong>Rotation: </strong><br/> {planet.rotation_period}
                     </p>
                     <p className="page-card-second-content page-card-text">
-                      <strong>Diameter: </strong> {planet.diameter}
+                      <strong>Diameter: </strong><br/> {planet.diameter}
                     </p>
                     <p className="page-card-third-content page-card-text">
-                      <strong>Climate: </strong>
+                      <strong>Climate: </strong><br/>
                       {planet.climate}
                     </p>
                     <p className="page-card-fourth-content page-card-text">
-                      <strong>Terrain: </strong>
+                      <strong>Terrain: </strong><br/>
                       {planet.terrain}
                     </p>
                   </div>

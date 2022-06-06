@@ -50,17 +50,17 @@ const Species = () => {
                   <div className="data-container" key={index}>
                     <h1 className="page-card-title">{specie.name}</h1>
                     <p className="page-card-first-content page-card-text">
-                      <strong>Classification: </strong> {specie.classification}
+                      <strong>Classification: </strong><br/> {specie.classification}
                     </p>
                     <p className="page-card-second-content page-card-text">
-                      <strong>Skin colors: </strong> {specie.skin_colors}
+                      <strong>Skin colors: </strong><br/> {specie.skin_colors}
                     </p>
                     <p className="page-card-third-content page-card-text">
-                      <strong>Language: </strong>
+                      <strong>Language: </strong><br/>
                       {specie.language}
                     </p>
                     <p className="page-card-fourth-content page-card-text">
-                      <strong>Designation: </strong>
+                      <strong>Designation: </strong><br/>
                       {specie.designation}
                     </p>
                   </div>

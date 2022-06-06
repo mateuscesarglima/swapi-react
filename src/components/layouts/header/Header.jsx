@@ -1,4 +1,3 @@
-
 import NavBar from "../navbar/NavBar";
 
 //SCROLL

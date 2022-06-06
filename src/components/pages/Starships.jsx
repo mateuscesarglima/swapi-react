@@ -48,20 +48,20 @@ const Starships = () => {
                   <div className="data-container" key={index}>
                     <h1 className="page-card-title">{starship.name}</h1>
                     <p className="page-card-text">
-                      <strong>Model: </strong> {starship.model}
+                      <strong>Model: </strong><br/> {starship.model}
                     </p>
                     <p className="page-card-text">
-                      <strong>Const in credits: </strong> {starship.cost_in_credits}
+                      <strong>Const in credits: </strong><br/> {starship.cost_in_credits}
                     </p>
                     <p className="page-card-text">
-                      <strong>Hyperdrive rating: </strong> {starship.hyperdrive_rating}
+                      <strong>Hyperdrive rating: </strong> <br/>{starship.hyperdrive_rating}
                     </p>
                     <p className="page-card-text">
-                      <strong>Lenght: </strong>
+                      <strong>Lenght: </strong><br/>
                       {starship.length}
                     </p>
                     <p className="page-card-text">
-                      <strong>Manufacturer: </strong>
+                      <strong>Manufacturer: </strong><br/>
                       {starship.manufacturer}
                     </p>
                   </div>

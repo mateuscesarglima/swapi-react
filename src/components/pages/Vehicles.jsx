@@ -49,26 +49,26 @@ const Vehicles = () => {
                   <div className="data-container" key={index}>
                     <h1 className="page-card-title">{vehicle.name}</h1>
                     <p className="page-card-text">
-                      <strong>Model: </strong> {vehicle.model}
+                      <strong>Model: </strong><br/> {vehicle.model}
                     </p>
                     <p className="page-card-text">
-                      <strong>Vechicle class: </strong>
+                      <strong>Vechicle class: </strong><br/>
                       {vehicle.vehicle_class}
                     </p>
                     <p className="page-card-text">
-                      <strong>Passengers: </strong>{" "}
+                      <strong>Passengers: </strong><br/>{" "}
                       {vehicle.passengers}
                     </p>
                     <p className="page-card-text">
-                      <strong>Cost in credits: </strong>{" "}
+                      <strong>Cost in credits: </strong><br/>{" "}
                       {vehicle.cost_in_credits}
                     </p>
                     <p className="page-card-text">
-                      <strong>Lenght: </strong>
+                      <strong>Lenght: </strong><br/>
                       {vehicle.length}
                     </p>
                     <p className="page-card-text">
-                      <strong>Manufacturer: </strong>
+                      <strong>Manufacturer: </strong><br/>
                       {vehicle.manufacturer}
                     </p>
                   </div>

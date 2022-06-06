@@ -1,27 +1,28 @@
-import NavBar from "../layouts/navbar/NavBar";
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import api from "../../services/Api";
 import Loader from "../layouts/loader/Loader";
+import NavBar from "../layouts/navbar/NavBar";
 
-const Films = ({url}) => {
-
+const Films = () => {
   const [loading, setLoading] = useState(true);
   const [films, setFilms] = useState([]);
 
 
   useEffect(() => {
     async function fetchFilms() {
-
       await api
         .get("/films/")
         .then(({ data }) => {
           setFilms(data.results);
+
           setLoading(false);
         })
         .catch((err) => {
           console.log(err);
         });
     }
+
     fetchFilms();
   });
 
@@ -50,14 +51,31 @@ const Films = ({url}) => {
                   <div className="data-container" key={index}>
                     <h1 className="page-card-title">{film.title}</h1>
                     <p className="page-card-text">
-                      <strong>Director: </strong>
+                      <strong>Director: </strong> <br />
                       {film.director}
                     </p>
-                    <p className="page-card-first-content page-card-text">
-                      <strong>Producer: </strong> {film.producer}
+                    <p className=" page-card-text">
+                      <strong>Producer: </strong> <br /> {film.producer}
                     </p>
-                    <p className="page-card-second-content page-card-text">
-                      <strong>Opening craw: </strong> {film.opening_crawl}
+                    <p className="page-card-text">
+                      <strong>Opening craw: </strong> <br />
+                      {film.opening_crawl}
+                    </p>
+                    <p className="page-card-text">
+                      <strong>Characters: </strong> <br />
+                      {film.characters.map((character, index) => (
+                        <Link
+                          key={index}
+                          style={{
+                            display: "flex",
+                            textDecoration: "none",
+                            color: "#FFF",
+                          }}
+                          to={`/people/${index + 1}`}
+                        >
+                          {`Character ` + (index + 1)}
+                        </Link>
+                      ))}
                     </p>
                   </div>
                 ))}
