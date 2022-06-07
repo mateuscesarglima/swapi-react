@@ -4,14 +4,16 @@ import api from "../../services/Api";
 import Loader from "../layouts/loader/Loader";
 import NavBar from "../layouts/navbar/NavBar";
 
-const People = () => {
 
+const People = () => {
   const [loading, setLoading] = useState(true);
   const [people, setPeople] = useState([]);
+  
+
 
   useEffect(() => {
     async function fetchPeople() {
-      await api.get("/people/").then(({ data }) => {
+      await api.get(`/people/`).then(({ data }) => {
         setPeople(data.results);
         setLoading(false);
       });
@@ -19,8 +21,8 @@ const People = () => {
     fetchPeople();
   });
 
+  console.log(people)
   
-
   return (
     <>
       {loading ? (
@@ -72,7 +74,8 @@ const People = () => {
                       <strong>Films: </strong>
                       <br />
                       {person.films.map((film, index) => (
-                        <Link key={index}
+                        <Link
+                          key={index}
                           style={{
                             display: "block",
                             textDecoration: "none",

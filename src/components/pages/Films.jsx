@@ -5,6 +5,7 @@ import Loader from "../layouts/loader/Loader";
 import NavBar from "../layouts/navbar/NavBar";
 
 const Films = () => {
+
   const [loading, setLoading] = useState(true);
   const [films, setFilms] = useState([]);
 
@@ -15,7 +16,6 @@ const Films = () => {
         .get("/films/")
         .then(({ data }) => {
           setFilms(data.results);
-
           setLoading(false);
         })
         .catch((err) => {
@@ -61,15 +61,19 @@ const Films = () => {
                       <strong>Opening craw: </strong> <br />
                       {film.opening_crawl}
                     </p>
-                    <p className="page-card-text">
+                    <p className="page-card-text" style={{display: 'flex', flexDirection: "column", gap: "1rem"}}>
                       <strong>Characters: </strong> <br />
                       {film.characters.map((character, index) => (
                         <Link
                           key={index}
                           style={{
-                            display: "flex",
                             textDecoration: "none",
                             color: "#FFF",
+                            backgroundColor: '#ffd43b',
+                            color: "#333",
+                            fontSize: "2rem",
+                            fontWeight: "500",
+                            padding: "1rem"
                           }}
                           to={`/people/${index + 1}`}
                         >

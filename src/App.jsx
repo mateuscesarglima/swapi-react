@@ -7,6 +7,7 @@ import Species from "./components/pages/Species";
 import Vehicles from "./components/pages/Vehicles";
 import Films from "./components/pages/Films";
 import FilteredFilms from "./components/pages/FilteredFilms";
+import FilteredCharacter from "./components/pages/FilteredCharacter";
 
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
       <Routes>
         <Route exact path="/" element={<Home />} />
         <Route exact path="/people" element={<People/>} />
+        <Route exact path="/people/:id" element={<FilteredCharacter />} />
         <Route exact path="/films" element={<Films />} />
         <Route exact path="/films/:id" element={<FilteredFilms />} />
         <Route exact path="/planets" element={<Planets />} />
