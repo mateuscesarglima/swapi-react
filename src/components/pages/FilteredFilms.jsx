@@ -1,25 +1,38 @@
-import React, { useEffect, useState } from "react";
-import NavBar from "../layouts/navbar/NavBar";
-import Loader from "../layouts/loader/Loader";
+import axios from "axios";
+import { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import Api from "../../services/Api";
+import Loader from "../layouts/loader/Loader";
+import NavBar from "../layouts/navbar/NavBar";
 
+const FilteredFilms = ({people}) => {
 
-const FilteredFilms = () => {
   const [loading, setLoading] = useState(true);
   const [film, setFilm] = useState([]);
   const { id } = useParams();
 
+
+
   useEffect(() => {
+    
     async function fetchFilm() {
-      await Api.get(`/films/${id}`).then(({ data }) => {
-        console.log(data);
+      await Api.get(`/films/${id}/`).then(({ data }) => {
         setFilm(data);
         setLoading(false);
       });
     }
     fetchFilm();
-  });
+  }, []);
+
+  const getName = (link) => {
+    let person = people.find(people => people.url === link)
+    return person.name
+  }
+
+  const getNumber = (link) => {
+    let number = link.split("/");
+    return number[5];
+  };
 
   return (
     <>
@@ -50,29 +63,41 @@ const FilteredFilms = () => {
                   <strong>Director: </strong> <br />
                   {film.director}
                 </p>
-                <p className="page-card-first-content page-card-text">
+                <p className=" page-card-text">
                   <strong>Producer: </strong> <br /> {film.producer}
                 </p>
-                <p className="page-card-second-content page-card-text">
+                <p className="page-card-text">
                   <strong>Opening craw: </strong> <br />
                   {film.opening_crawl}
                 </p>
-                <p className="page-card-text">
-                      <strong>Characters: </strong> <br />
-                      {film.characters.map((character, index) => (
-                        <Link
-                          key={index}
-                          style={{
-                            display: "flex",
-                            textDecoration: "none",
-                            color: "#FFF",
-                          }}
-                          to={`/people/${index + 1}`}
-                        >
-                          {`Character ` + (index + 1)}
-                        </Link>
-                      ))}
-                    </p>
+                <p
+                  className="page-card-text"
+                  style={{
+                    display: "flex",
+                    flexDirection: "column",
+                    gap: "1rem",
+                  }}
+                >
+                  <strong>Characters: </strong>
+                  {film.characters.map((character, index) => (
+                    <Link
+                      key={index}
+                      style={{
+                        textDecoration: "none",
+                        color: "#FFF",
+                        backgroundColor: "#ffd43b",
+                        color: "#333",
+                        fontSize: "2rem",
+                        fontWeight: "500",
+                        padding: "1rem",
+                        display: "block",
+                      }}
+                      to={`/people/${getNumber(character)}`}
+                    >
+                      {getName(character)}
+                    </Link>
+                  ))}
+                </p>
               </div>
             </div>
           </div>

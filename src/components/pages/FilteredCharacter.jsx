@@ -4,48 +4,49 @@ import NavBar from "../layouts/navbar/NavBar";
 import Loader from "../layouts/loader/Loader";
 import Api from "../../services/Api";
 
-
-
-const FilteredCharacter = () => {
-
+const FilteredCharacter = ({ films }) => {
 
   const [loading, setLoading] = useState(true);
-  const [people, setPeople] = useState([])
+  const [people, setPeople] = useState([]);
   const { id } = useParams();
 
   useEffect(() => {
     async function fetchFilm() {
       await Api.get(`/people/${id}/`).then(({ data }) => {
-        console.log(data);
-        setPeople(data)
-        setLoading(false)
+        setPeople(data);
+        setLoading(false);
       });
     }
     fetchFilm();
   });
 
-
   return (
     <>
-    {loading ? (
-      <div style={{ backgroundColor: "#333" }}>
-        <NavBar />
-        <Loader color="#ffd43b" size="100" />
-      </div>
-    ) : (
-      <div className="people-content" style={{ backgroundColor: "#333" }}>
-        <div className="navbar-container">
+      {loading ? (
+        <div style={{ backgroundColor: "#333" }}>
           <NavBar />
+          <Loader color="#ffd43b" size="100" />
         </div>
-        <div
-          style={{
-            maxWidth: "140rem",
-            padding: "0 3.6rem",
-            margin: "0 auto",
-          }}
-        >
-          <div className="card-container-people">
-            <div style={{textAlign: "center", display: "flex", justifyContent: "center"}}>
+      ) : (
+        <div className="people-content" style={{ backgroundColor: "#333" }}>
+          <div className="navbar-container">
+            <NavBar />
+          </div>
+          <div
+            style={{
+              maxWidth: "140rem",
+              padding: "0 3.6rem",
+              margin: "0 auto",
+            }}
+          >
+            <div className="card-container-people">
+              <div
+                style={{
+                  textAlign: "center",
+                  display: "flex",
+                  justifyContent: "center",
+                }}
+              >
                 <div className="data-container">
                   <h1 className="page-card-title">{people.name}</h1>
                   <p className="page-card-text">
@@ -88,15 +89,15 @@ const FilteredCharacter = () => {
                         {`Film ` + (index + 1)}
                       </Link>
                     ))}
-                  </p>      
+                  </p>
                 </div>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    )}
-  </>
-  )
-}
+      )}
+    </>
+  );
+};
 
-export default FilteredCharacter
+export default FilteredCharacter;

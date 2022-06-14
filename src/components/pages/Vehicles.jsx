@@ -22,8 +22,6 @@ const Vehicles = () => {
     fetchVehicles();
   }, []);
 
-  console.log(vehicles)
-
   return (
     <>
       {loading ? (
