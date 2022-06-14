@@ -1,17 +1,14 @@
-
 import React from "react";
 import { Link } from "react-router-dom";
 
-
 const Film = ({ film, index, characters }) => {
+  let char = Array.from(characters);
+  console.log(char);
 
-  let char = Array.from(characters)
-  console.log(char)
-  
   const getNumber = (link) => {
-    let number = link.split('/')
-    return number[5]
-  }
+    let number = link.split("/");
+    return number[5];
+  };
 
   return (
     <div className="data-container" key={index}>
@@ -31,10 +28,10 @@ const Film = ({ film, index, characters }) => {
         className="page-card-text"
         style={{ display: "flex", flexDirection: "column", gap: "1rem" }}
       >
-        <strong>Characters: </strong> <br />
+        <strong>Characters: </strong>
         {film.characters.map((character, index) => (
           <Link
-          target="_blank"
+            target="_blank"
             key={index}
             style={{
               textDecoration: "none",
@@ -42,13 +39,15 @@ const Film = ({ film, index, characters }) => {
               backgroundColor: "#ffd43b",
               color: "#333",
               fontSize: "2rem",
-              fontWeight: "500",
+              fontWeight: "600",
               padding: "1rem",
             }}
             to={`/people/${getNumber(character)}`}
           >
-            {getNumber(character) >= 17 ? char[getNumber(character) - 2] : char[getNumber(character) - 1] }
-            
+            {getNumber(character) >= 17
+              ? char[getNumber(character) - 2]
+              : char[getNumber(character) - 1]}
+
           </Link>
         ))}
       </p>

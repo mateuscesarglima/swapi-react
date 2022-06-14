@@ -5,11 +5,12 @@ import NavBar from "../layouts/navbar/NavBar";
 import Film from "./Film";
 
 const Films = () => {
+
   const [loading, setLoading] = useState(true);
   const [films, setFilms] = useState([]);
   const [characters, setCharacters] = useState([])
-  const arr = new Set()
   
+  const arr = new Set()
 
   useEffect(() => {
     async function fetchFilms() {
@@ -37,6 +38,8 @@ const Films = () => {
     fetchFilms();
     fetchPeople();
   }, []);
+
+  console.log(characters)
 
   return (
     <>
