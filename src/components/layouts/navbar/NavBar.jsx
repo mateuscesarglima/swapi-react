@@ -14,7 +14,9 @@ const NavBar = () => {
   return (
     <nav className="nav-box">
       <div className="img-box">
-        <img className="logo" src={logo} alt={`${"Star Wars Logo"}`} />
+        <Link to='/'>
+          <img className="logo" src={logo} alt={`${"Star Wars Logo"}`} />
+        </Link>
       </div>
       <div className="navigation">
         <ul className="main-nav-list">
@@ -56,9 +58,7 @@ const NavBar = () => {
         </ul>
       </div>
       <button className="btn-mobile-nav">
-        <FiMenu className="icon-mobile-nav"
-         name="menu" 
-         onClick={handleMenu} />
+        <FiMenu className="icon-mobile-nav" name="menu" onClick={handleMenu} />
         <RiCloseFill
           className="icon-mobile-nav"
           name="close"

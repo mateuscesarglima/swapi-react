@@ -1,24 +1,41 @@
-import { useState, useEffect } from "react";
+import axios from "axios";
+import { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
-import NavBar from "../layouts/navbar/NavBar";
-import Loader from "../layouts/loader/Loader";
 import Api from "../../services/Api";
+import Loader from "../layouts/loader/Loader";
+import NavBar from "../layouts/navbar/NavBar";
 
 const FilteredCharacter = ({ films }) => {
-
   const [loading, setLoading] = useState(true);
+  const [loadingFilm, setLoadingFilm] = useState(true);
   const [people, setPeople] = useState([]);
+  const [film, setFilm] = useState([]);
   const { id } = useParams();
 
   useEffect(() => {
-    async function fetchFilm() {
+    async function fetchPeople() {
       await Api.get(`/people/${id}/`).then(({ data }) => {
         setPeople(data);
         setLoading(false);
       });
     }
-    fetchFilm();
-  });
+    fetchPeople();
+  }, [id]);
+
+  useEffect(() => {
+    async function fetchFilms() {
+      if (people?.name) {
+        await Promise.all(
+          people?.films?.map((film) => axios.get(film).then(({ data }) => data))
+        ).then((data) => {
+          setFilm(data);
+          setLoadingFilm(false);
+        });
+      }
+    }
+    fetchFilms();
+    fetchFilms();
+  }, [people]);
 
   return (
     <>
@@ -54,42 +71,62 @@ const FilteredCharacter = ({ films }) => {
                     <br />
                     {people.birth_year}
                   </p>
-                  <p className="page-card-first-content page-card-text">
+                  <p className="page-card-text">
                     <strong>Height: </strong>
                     <br /> {people.height} cm
                   </p>
-                  <p className="page-card-second-content page-card-text">
+                  <p className="page-card-text">
                     <strong>Mass: </strong>
                     <br /> {people.mass}
                   </p>
-                  <p className="page-card-third-content page-card-text">
+                  <p className="page-card-text">
                     <strong>Hair color: </strong>
                     <br />
                     {people.hair_color}
                   </p>
-                  <p className="page-card-fourth-content page-card-text">
+                  <p className="page-card-text">
                     <strong>Skin color: </strong>
                     <br />
                     {people.skin_color}
                   </p>
-                  <p className="page-card-fourth-content page-card-text">
+                  <div className="page-card-text" style={{
+                    display: "flex",
+                    flexDirection: "column",
+                    gap: "1rem",
+                  }}>
                     <strong>Films: </strong>
-                    <br />
-                    {people.films.map((film, index) => (
-                      <Link
-                        key={index}
-                        style={{
-                          display: "block",
-                          textDecoration: "none",
-                          color: "#FFF",
-                        }}
-                        target="_blank"
-                        to={`/films/${index + 1}`}
-                      >
-                        {`Film ` + (index + 1)}
-                      </Link>
-                    ))}
-                  </p>
+
+                    {loadingFilm ? (
+                      <div style={{ backgroundColor: "#333" }}>
+                        <Loader color="#ffd43b" size="100" />
+                      </div>
+                    ) : (
+                      <>
+                        {people.films.map((films, index) => (
+                          <Link
+                            key={index}
+                            style={{
+                              textDecoration: "none",
+                            color: "#FFF",
+                            backgroundColor: "#ffd43b",
+                            color: "#333",
+                            fontSize: "2rem",
+                            fontWeight: "500",
+                            padding: "1rem",
+                            display: "block",
+                            }}
+                            to={`/films/${index + 1}`}
+                          >
+                            {
+                            film?.find(
+                              (filmData) => filmData.url === films
+                            )?.title
+                          }
+                          </Link>
+                        ))}
+                      </>
+                    )}
+                  </div>
                 </div>
               </div>
             </div>

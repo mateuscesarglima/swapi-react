@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const Person = ({ person, films }) => {
+const Person = ({ person, films, index }) => {
 
   
 
@@ -19,7 +19,7 @@ const Person = ({ person, films }) => {
   };
 
   return (
-    <div className="data-container">
+    <div className="data-container" key={index}>
       <h1 className="page-card-title">{person.name}</h1>
       <p className="page-card-text">
         <strong>Birth Year: </strong>
