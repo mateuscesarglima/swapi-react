@@ -1,38 +1,45 @@
-import axios from "axios";
 import { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
-import Api from "../../services/Api";
+import fetchSpecificFilm from "../../services/fetchSpecificFilm";
+import fetchPerson from "../../services/fetchPerson";
 import Loader from "../layouts/loader/Loader";
 import NavBar from "../layouts/navbar/NavBar";
 
-const FilteredFilms = ({people}) => {
-
+const FilteredFilms = () => {
   const [loading, setLoading] = useState(true);
   const [film, setFilm] = useState([]);
+  const [loadingCharacters, setLoadingCharacters] = useState(true);
+  const [characters, setCharacters] = useState([]);
   const { id } = useParams();
 
-
+  useEffect(() => {
+    fetchSpecificFilm.get(id).then(({ data }) => {
+      setFilm(data);
+      setLoading(false);
+    });
+  }, [id]);
 
   useEffect(() => {
-    
-    async function fetchFilm() {
-      await Api.get(`/films/${id}/`).then(({ data }) => {
-        setFilm(data);
-        setLoading(false);
-      });
+    if (film?.title) {
+      async function fetchCharacter() {
+        await Promise.all(
+          film?.characters?.map((character) =>
+            fetchPerson.get(character).then(({ data }) => data)
+          )
+        ).then((data) => {
+          setCharacters(data);
+          setLoadingCharacters(false)
+        });
+      }
+      fetchCharacter();
     }
-    fetchFilm();
-  }, []);
-
-  const getName = (link) => {
-    let person = people.find(people => people.url === link)
-    return person.name
-  }
+  }, [film]);
 
   const getNumber = (link) => {
     let number = link.split("/");
     return number[5];
   };
+
 
   return (
     <>
@@ -70,7 +77,7 @@ const FilteredFilms = ({people}) => {
                   <strong>Opening craw: </strong> <br />
                   {film.opening_crawl}
                 </p>
-                <p
+                <div
                   className="page-card-text"
                   style={{
                     display: "flex",
@@ -79,25 +86,37 @@ const FilteredFilms = ({people}) => {
                   }}
                 >
                   <strong>Characters: </strong>
-                  {film.characters.map((character, index) => (
-                    <Link
-                      key={index}
-                      style={{
-                        textDecoration: "none",
-                        color: "#FFF",
-                        backgroundColor: "#ffd43b",
-                        color: "#333",
-                        fontSize: "2rem",
-                        fontWeight: "500",
-                        padding: "1rem",
-                        display: "block",
-                      }}
-                      to={`/people/${getNumber(character)}`}
-                    >
-                      {getName(character)}
-                    </Link>
-                  ))}
-                </p>
+                  {loadingCharacters ? (
+                    <div style={{ backgroundColor: "#333" }}>
+                      <Loader color="#ffd43b" size="100" />
+                    </div>
+                  ) : (
+                    <>
+                      {film?.characters?.map((character, index) => (
+                        <Link
+                          key={index}
+                          style={{
+                            textDecoration: "none",
+                            color: "#FFF",
+                            backgroundColor: "#ffd43b",
+                            color: "#333",
+                            fontSize: "2rem",
+                            fontWeight: "500",
+                            padding: "1rem",
+                            display: "block",
+                          }}
+                          to={`/people/${getNumber(character)}`}
+                        >
+                          {
+                            characters?.find(
+                              (person) => person.url === character
+                            )?.name
+                          }
+                        </Link>
+                      ))}
+                    </>
+                  )}
+                </div>
               </div>
             </div>
           </div>

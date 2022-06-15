@@ -5,7 +5,7 @@ import NavBar from "../layouts/navbar/NavBar";
 import Person from "./Person";
 
 
-const People = ({films, teste}) => {
+const People = ({films }) => {
   
   const [loading, setLoading] = useState(true);
   const [people, setPeople] = useState([]);
@@ -43,7 +43,7 @@ const People = ({films, teste}) => {
             <div className="card-container-people">
               <div className="cards grid grid--3-cols">
                 {people.map((person, index) => (
-                  <Person person={person} films={films}/>
+                  <Person key={index} person={person} films={films} index={index}/>
                 ))}
               </div>
             </div>

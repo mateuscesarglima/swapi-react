@@ -12,10 +12,8 @@ import { useEffect, useState } from "react";
 import Api from "./services/Api";
 
 function App() {
-
   const [films, setFilms] = useState([]);
-  const [characters, setCharacters] = useState([]);
-  let arr = []
+ 
 
   useEffect(() => {
     Api.get(`/films/`)
@@ -25,26 +23,9 @@ function App() {
       .catch((err) => {
         console.log(err);
       });
-    async function fetchPeople() {
-      for (let i = 1; i <= 83; i++) {
-        if (i === 17) {
-          continue;
-        }
-        await Api.get(`/people/${i}/`).then(({ data }) => {
-          if(!arr.some((obj) => obj.name === data.name)){
-            arr.push({
-              name: data.name,
-              url: data.url
-            })
-          }
-        });
-      }
-      setCharacters(arr);
-    }
-    fetchPeople();
   }, []);
 
-  console.log(characters)
+
 
   return (
     <div className="App">
@@ -57,7 +38,7 @@ function App() {
           element={<FilteredCharacter films={films} />}
         />
         <Route exact path="/films" element={<Films />} />
-        <Route exact path="/films/:id" element={<FilteredFilms people={characters}/>} />
+        <Route exact path="/films/:id" element={<FilteredFilms />} />
         <Route exact path="/planets" element={<Planets />} />
         <Route exact path="/starships" element={<Starships />} />
         <Route exact path="/species" element={<Species />} />
