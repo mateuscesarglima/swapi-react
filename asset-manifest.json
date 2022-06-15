@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/swapi-react/static/css/main.4bfb3701.css",
-    "main.js": "/swapi-react/static/js/main.93cb0a3f.js",
+    "main.css": "/swapi-react/static/css/main.469d7525.css",
+    "main.js": "/swapi-react/static/js/main.2f677ef0.js",
     "static/media/backgroundImg.webp": "/swapi-react/static/media/backgroundImg.73507f49ad950c881e8f.webp",
     "static/media/stormtroopers-2.webp": "/swapi-react/static/media/stormtroopers-2.a49f12a93c27c8bdc7dd.webp",
     "static/media/tatooine.webp": "/swapi-react/static/media/tatooine.74d5ba95d19cb73c8f29.webp",
@@ -11,11 +11,11 @@
     "static/media/slick.ttf": "/swapi-react/static/media/slick.c94f7671dcc99dce43e2.ttf",
     "static/media/slick.woff": "/swapi-react/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/swapi-react/index.html",
-    "main.4bfb3701.css.map": "/swapi-react/static/css/main.4bfb3701.css.map",
-    "main.93cb0a3f.js.map": "/swapi-react/static/js/main.93cb0a3f.js.map"
+    "main.469d7525.css.map": "/swapi-react/static/css/main.469d7525.css.map",
+    "main.2f677ef0.js.map": "/swapi-react/static/js/main.2f677ef0.js.map"
   },
   "entrypoints": [
-    "static/css/main.4bfb3701.css",
-    "static/js/main.93cb0a3f.js"
+    "static/css/main.469d7525.css",
+    "static/js/main.2f677ef0.js"
   ]
 }
